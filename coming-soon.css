@@ -33,6 +33,7 @@ body {
     overflow-x: hidden;
     position: relative;
     /* transform: scale(.7); */
+    max-height: max-content;
 
 }
 .container {
@@ -44,6 +45,7 @@ body {
     width: 100%;
     align-items: center;
     justify-content: space-evenly;
+    overflow: hidden;
     /* background-color: var(--primary-color); */
 } 
 .hero-img-div {
@@ -52,8 +54,9 @@ body {
     order: 1;
     height: 100%;
     overflow: hidden;
-    background: url(hero-desktop.jpg) no-repeat;
+    background: url(images/hero-desktop.jpg) no-repeat;
     background-size: 155% 100%;
+    /* margin: auto; */
     background-color: rgb(61, 61, 61);
     position: relative;
 }
@@ -263,18 +266,23 @@ body {
     height: 100%;
     width: 100%;
     z-index: -1;
-    /* background-color: red; */
+    background-color: rgb(255, 255, 255);
+    /* transform: translateY(50%); */
 }
 .background-group {
     width: 100%;
     height: 100%;
     /* fill: red; */
     position: relative;
+    /* background-color: red; */
 }
 .bottom-path {
     position: absolute;
-    /* bottom: -100%; */
-    display: none;
+    /* max-width: 100%;
+    height: 100%; */
+    /* bottom: 0;
+    bottom: -100%; */
+    /* display: none; */
 }
 .search-icon-error {
     background-color: #ffe9f4f5;
@@ -361,6 +369,12 @@ body {
 @media  only screen and (max-width: 699px) {
     body {
         height: 200vmax;
+        overflow-x: hidden;
+    }
+    .back-image {
+        height: 50%;
+        background-color: rgb(255, 255, 255);
+        transform: translateY(50%);
     }
     .hero-div {
         width: 120%;
@@ -395,7 +409,7 @@ body {
         height: max-content;
     }
     .pink {
-        transform: translateY(-250%);
+        transform: translateY(-300%);
         
     }
     .pink,.black,.soon {
@@ -405,7 +419,7 @@ body {
     .black,.soon {
         margin: 0;
         /* transform: translateY(-50%); */
-        transform: translateY(-150%);
+        transform: translateY(-200%);
     }
     .hero-text-content {
         width: 100%;
@@ -413,7 +427,7 @@ body {
 }
 @media  only screen and (max-width: 500px) {
     .hero-img-div {
-        background: url(hero-mobile.jpg) no-repeat;
+        background: url(images/hero-mobile.jpg) no-repeat;
         background-size: 100% 100%;
     }
     
@@ -424,7 +438,7 @@ body {
         
     }
     .hero-img-div {
-        background: url(hero-mobile.jpg) no-repeat;
+        background: url(images/hero-mobile.jpg) no-repeat;
         background-size: 105% 100%;
     }
     
@@ -455,4 +469,23 @@ body {
         
     }
 
+    .pink {
+        transform: translateY(-400%);
+        
+    }
+    .black,.soon {
+        margin: 0;
+        /* transform: translateY(-50%); */
+        transform: translateY(-250%);
+    }
+    
+}
+@media  only screen and (max-width: 280px) {
+    html {
+        font-size: 6px;
+    }
+    .hero-text-content {
+        width: 70%;
+        margin: auto;
+    }
 }
